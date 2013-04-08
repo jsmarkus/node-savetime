@@ -4,6 +4,10 @@
     "private":true,
     "dependencies":{
         "boop":"*",
-        "automata":"*"
+        "automata":"*",
+        "express":"*",
+        "browserify-middleware":"*",
+        "jade":"*",
+        "socket.io":"*"
     }
 }
