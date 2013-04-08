@@ -2,7 +2,8 @@ var Savetime = require('./lib/Savetime');
 var SavetimePluginSocketio = require('./lib/Savetime/PluginSocketio');
 
 var serviceMachine = require('./lib/ServiceMachine');
-var ServiceLogic = require('./lib/ServiceLogic');
+// var ServiceLogic = require('./lib/ServiceLogic/Fake');
+var ServiceLogic = require('./lib/ServiceLogic/Ufw');
 serviceMachine.register(ServiceLogic);
 
 var billingMachine = require('./lib/BillingMachine');
