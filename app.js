@@ -23,8 +23,8 @@ var core = new Savetime({
     service : svc,
     billing : blg,
     account : acc,
-    timerInterval : 6000,
-    perMinutePrice : 1
+    timerInterval : 100,
+    perMinutePrice : 20
 }, [
     socketioPlugin
 ]);

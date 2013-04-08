@@ -8,6 +8,7 @@
         "express":"*",
         "browserify-middleware":"*",
         "jade":"*",
-        "socket.io":"*"
+        "socket.io":"*",
+        "knockout":"*"
     }
 }

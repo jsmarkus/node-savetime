@@ -1,5 +1,14 @@
-.service-state(data-bind="text:serviceValue")
-.account-value(data-bind="text:accountValue")
+.savetime-screen(data-bind="visible:(true)", style="display:none;")
+    .service-state
+        div(data-bind="if:billingIsOff") OFF
+        div(data-bind="if:billingIsOn") ON
+        div(data-bind="if:billingIsPaused") Paused
+    .account-value(data-bind="text:accountValueReadable")
+    .actions
+        div(data-bind="if:billingIsPaused")
+            button(data-bind="click:onResumeClick") Resume
+        div(data-bind="if:billingIsOn")
+            button(data-bind="click:onPauseClick") Pause
 
 script(src="/socket.io/socket.io.js")
 script(src="/js/bundle.js")
