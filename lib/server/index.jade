@@ -1,14 +1,27 @@
+link(
+    href='http://fonts.googleapis.com/css?family=Raleway:400,300,700,100'
+    rel='stylesheet'
+    type='text/css')
+link(
+    href='http://fonts.googleapis.com/css?family=Baumans'
+    rel='stylesheet'
+    type='text/css')
+link(
+    href='style.css'
+    rel='stylesheet'
+    type='text/css')
+
 .savetime-screen(data-bind="visible:(true)", style="display:none;")
-    .service-state
+    .state
         div(data-bind="if:billingIsOff") OFF
         div(data-bind="if:billingIsOn") ON
         div(data-bind="if:billingIsPaused") Paused
-    .account-value(data-bind="text:accountValueReadable")
+    .account-value(data-bind="text:accountValueReadable, css:{'font-green':accountValue() > 0,'font-yellow':accountValue() <= 0}")
     .actions
         div(data-bind="if:billingIsPaused")
-            button(data-bind="click:onResumeClick") Resume
+            button.btn(data-bind="click:onResumeClick") Resume
         div(data-bind="if:billingIsOn")
-            button(data-bind="click:onPauseClick") Pause
+            button.btn(data-bind="click:onPauseClick") Pause
 
 script(src="/socket.io/socket.io.js")
 script(src="/js/bundle.js")
