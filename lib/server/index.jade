@@ -9,15 +9,15 @@ link(
 
 .savetime-screen(data-bind="visible:(true)", style="display:none;")
     .state
-        div(data-bind="if:billingIsOff") OFF
-        div(data-bind="if:billingIsOn") ON
-        div(data-bind="if:billingIsPaused") Paused
+        div(data-bind="if:billingIsOff") Выключено
+        div(data-bind="if:billingIsOn") Включено
+        div(data-bind="if:billingIsPaused") Пауза
     .account-value(data-bind="text:accountValueReadable, css:{'font-green':accountValue() > 0,'font-yellow':accountValue() <= 0}")
     .actions
         div(data-bind="if:billingIsPaused")
-            button.btn(data-bind="click:onResumeClick") Resume
+            button.btn(data-bind="click:onResumeClick") Возобновить
         div(data-bind="if:billingIsOn")
-            button.btn(data-bind="click:onPauseClick") Pause
+            button.btn(data-bind="click:onPauseClick") Пауза
 
 script(src="/socket.io/socket.io.js")
 script(src="/js/bundle.js")

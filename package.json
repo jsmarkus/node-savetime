@@ -9,6 +9,8 @@
         "browserify-middleware":"*",
         "jade":"*",
         "socket.io":"*",
-        "knockout":"*"
+        "knockout":"*",
+        "async":"*",
+        "levelup":"0.8.0"
     }
 }
